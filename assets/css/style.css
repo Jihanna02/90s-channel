@@ -1,0 +1,58 @@
+body {
+	font-family: 'Caudex', serif;
+}
+
+.station-list {
+	width: 20%;
+    float: left;
+    height: 95vh;
+}
+
+button, input {
+	display: block;
+	width: 95%;
+	padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+#submit {
+	box-sizing: content-box;
+	width: 86%;
+	background-color: yellow;
+	border: 1px solid bla
+}
+
+img.gif {
+    padding: 5px;
+}
+
+header {
+	padding: 15px;
+}
+
+h1 {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 45px;
+}
+
+h2 {
+	font-family: 'Bungee Hairline', cursive;
+	font-size: 23px;
+}
+
+.artist-select {
+	color: red;
+}
+
+.active {
+	background-color: red;
+}
+
+.active:focus{
+	outline: none;
+}
+
+.active: active {
+	border: 0;
+}

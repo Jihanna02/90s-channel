@@ -2,26 +2,27 @@
 <html>
 <head>
 	<title>The 90's Station</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Caudex|Ubuntu" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<h1>The 90's Station</h1>
-	</header>
+	<div class="container">		
 
-	<div class="container">
-		<section>
+		<header>
+			<h1>The 90's Station</h1>
+			<h2><span class="channel-select">Please select a channel</span><span class="artist-select"></span></h2>
+		</header>
+
+		<section class="station-list">
 			<div id="stations"></div>
-			<input type="text" name="add-station" id="add-station">
-			<input type="submit" name="submit" id="submit">
+			<input type="textarea" name="add-station" id="add-station" placeholder="add a new artist">
+			<input type="submit" name="submit" id="submit" value="add">
 		</section>
 
 		<section>
 			<div id="giphy">
-				<img src="https://giphy.com/gifs/xHhITZvhZsmQ0/html5">
-				<img src="https://media2.giphy.com/media/xHhITZvhZsmQ0/480w_s.jpg">
 			</div>
-			
-			api youtube output
 		</section>
 	</div>
 
