@@ -42,7 +42,7 @@ $(document).ready(function(){
 
 		$("#giphy").empty();
 
-		var apiURL = "https://api.giphy.com/v1/gifs/search?api_key=xYMoXqkxy5CwhMYVKmNgGpMzN5gPd5Lw&q="+artistName+"&limit=9&offset=0&rating=G&lang=en";
+		var apiURL = "https://api.giphy.com/v1/gifs/search?api_key=xYMoXqkxy5CwhMYVKmNgGpMzN5gPd5Lw&q="+artistName+"&limit=10&offset=0&rating=G&lang=en";
 
 
 		$.ajax(
