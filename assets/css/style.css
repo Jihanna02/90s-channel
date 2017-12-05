@@ -14,13 +14,28 @@ button, input {
 	padding: 10px;
     margin: 5px;
     box-sizing: border-box;
+    font-family: 'Caudex', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+button:hover, input:hover {
+	background-color: #ffffff;
+	border: 1px solid #afafaf;
+	color: #000000;
+}
+
+input#add-station {
+    background-color: white;
+    border: 1px solid #afafaf;
 }
 
 #submit {
-	box-sizing: content-box;
-	width: 86%;
-	background-color: yellow;
-	border: 1px solid bla
+    box-sizing: content-box;
+    width: 86%;
+    color: #ffffff;
+    background-color: black;
+    border: 1px solid #afafaf;
 }
 
 img.gif {
@@ -42,17 +57,34 @@ h2 {
 }
 
 .artist-select {
-	color: red;
+	color: #b70202;
+    font-weight: 800;
 }
 
 .active {
-	background-color: red;
+	background-color: #b70202;
+	border: 1px solid #afafaf;
+	color: #ffffff;
 }
 
 .active:focus{
 	outline: none;
 }
 
-.active: active {
-	border: 0;
+/*.active: active {
+	border: 1px solid #afafaf;
+}*/
+
+.giphy-container {
+    float: left;
+}
+
+.response-rating {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.75em;
+    text-align: center;
+    background-color: rgba(206, 206, 206, 0.42);
+    margin: 0 4px;
+    padding: 2px;
 }

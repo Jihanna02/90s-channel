@@ -23,14 +23,17 @@ $(document).ready(function(){
 		makeButtons();
 	}
 
+	//click function adds new button for artist input by user
 	$("#submit").on("click", function(){
 		event.preventDefault();
 
 		var newArtist = $("#add-station").val().trim("");
-		
-		addButton(newArtist);
 
-		var newArtist = $("#add-station").val("");
+		if (newArtist != "") {
+			addButton(newArtist);
+		}
+
+		newArtist = $("#add-station").val("");
 
 	});
 
@@ -51,6 +54,9 @@ $(document).ready(function(){
 				for(i=0; i < results.length; i++){
 					var animatedURL = response.data[i].images.fixed_height.url;
 					var stillURL = response.data[i].images.fixed_height_still.url;
+					var rating = response.data[i].rating;
+
+					console.log(results);
 
 					var responseImg = $("<img>");
 					$(responseImg).addClass("gif");
@@ -59,24 +65,36 @@ $(document).ready(function(){
 					$(responseImg).attr("data-still", stillURL);
 					$(responseImg).attr("data-animate", animatedURL);
 
-					$("#giphy").append(responseImg);
+					var responseRating = $("<div>");
+					$(responseRating).addClass("response-rating");
+					$(responseRating).text("Rated: " + rating);
+
+					var giphyContainer = $("<div>");
+					$(giphyContainer).addClass("giphy-container");
+					$(giphyContainer).append(responseImg);
+					$(giphyContainer).append(responseRating);
+
+					$("#giphy").append(giphyContainer).hide().fadeIn();
+
 				}
 			});
 	}
 
+	//manages artist button click states and "now playing"
 	$("#stations").on("click", "button", function(){
 		var artistName = $(this).text();
 
 		$(".channel-select").text("Now Playing: ");
-		$(".artist-select").text(artistName);
+		$(".artist-select").text(artistName).hide().slideDown();
 
 		$("button").removeClass("active");
 		$(this).addClass("active");
 
 		makeGiphyMagic(artistName);
+
 	});
 
-
+	//manages play/pause function of gifs
 	$("#giphy").on("click",".gif", function(){
 
       var state = $(this).attr("data-state");
