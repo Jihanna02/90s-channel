@@ -1,5 +1,3 @@
-# 90s-channel
-
 ![Landing Page Screenshot](https://github.com/nessienessquik/90s-channel/blob/master/screenshots/Screenshot-01.png)
 
 ### Overview
